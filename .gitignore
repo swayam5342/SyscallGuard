@@ -1,0 +1,19 @@
+# build output
+build/
+*.o
+
+# Python
+__pycache__/
+*.pyc
+
+# event logs and scratch output from local runs
+*.jsonl
+*.log
+
+# editors
+.vscode/
+.idea/
+*.swp
+
+# private design-change record
+CHANGES.md
