@@ -1,0 +1,2437 @@
+{
+ "meta": {
+  "label": "wsl2-6.6-v3",
+  "host": "Swayamp",
+  "kernel": "6.6.114.1-microsoft-standard-WSL2",
+  "cpus": 10,
+  "date": "2026-10-16 21:37 UTC",
+  "reps": 3,
+  "duration": 10,
+  "rate": 200000,
+  "interval_ms": 10,
+  "costs": "costs/wsl2-6.6.conf",
+  "skipped": [],
+  "sgd_extra": "",
+  "cgroup_limits": {
+   "cpu.max": "100000 100000",
+   "pids.max": "32",
+   "io.max": "8:80 wiops=200"
+  }
+ },
+ "results": {
+  "E1": {
+   "native": [
+    {
+     "getppid_ns": 68.5,
+     "read_ns": 96.6,
+     "rc": 0,
+     "wall_s": 0.1526053449997562
+    },
+    {
+     "getppid_ns": 70.3,
+     "read_ns": 96.8,
+     "rc": 0,
+     "wall_s": 0.1653655059999437
+    },
+    {
+     "getppid_ns": 77.2,
+     "read_ns": 98.5,
+     "rc": 0,
+     "wall_s": 0.19820829599848366
+    }
+   ],
+   "sgd": [
+    {
+     "getppid_ns": 77.3,
+     "read_ns": 14792.8,
+     "rc": 0,
+     "wall_s": 1.6597293890008586,
+     "sgd_cpu_s": 0.34
+    },
+    {
+     "getppid_ns": 83.2,
+     "read_ns": 15092.8,
+     "rc": 0,
+     "wall_s": 1.6943955889983044,
+     "sgd_cpu_s": 0.35
+    },
+    {
+     "getppid_ns": 74.3,
+     "read_ns": 17662.0,
+     "rc": 0,
+     "wall_s": 1.9301210650010034,
+     "sgd_cpu_s": 0.44
+    }
+   ]
+  },
+  "E2": {
+   "native": [
+    {
+     "rc": 0,
+     "wall_s": 0.763187016997108
+    },
+    {
+     "rc": 0,
+     "wall_s": 0.6085297530007665
+    },
+    {
+     "rc": 0,
+     "wall_s": 0.5889684850008052
+    }
+   ],
+   "sgd": [
+    {
+     "rc": 0,
+     "wall_s": 0.6406738480000058,
+     "sgd_cpu_s": 0.04,
+     "sgd_job": {
+      "duration_s": 0.637,
+      "calls": 11828,
+      "allowed": 11828,
+      "waited": 0,
+      "rejected": 0,
+      "charged": 48336,
+      "max_wait_ms": 0.0,
+      "loans": 0,
+      "borrowed": 0,
+      "lent": 0
+     }
+    },
+    {
+     "rc": 0,
+     "wall_s": 0.5694178089979687,
+     "sgd_cpu_s": 0.04,
+     "sgd_job": {
+      "duration_s": 0.566,
+      "calls": 11802,
+      "allowed": 11802,
+      "waited": 0,
+      "rejected": 0,
+      "charged": 48312,
+      "max_wait_ms": 0.0,
+      "loans": 0,
+      "borrowed": 0,
+      "lent": 0
+     }
+    },
+    {
+     "rc": 0,
+     "wall_s": 0.701319035000779,
+     "sgd_cpu_s": 0.03,
+     "sgd_job": {
+      "duration_s": 0.697,
+      "calls": 11818,
+      "allowed": 11818,
+      "waited": 0,
+      "rejected": 0,
+      "charged": 48330,
+      "max_wait_ms": 0.0,
+      "loans": 0,
+      "borrowed": 0,
+      "lent": 0
+     }
+    }
+   ]
+  },
+  "E3": {
+   "none-alone": [
+    {
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 60,
+      "p95_us": 90,
+      "p99_us": 127,
+      "max_us": 338,
+      "mean_us": 62.8,
+      "rc": 0,
+      "wall_s": 9.01618322899958
+     }
+    },
+    {
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 60,
+      "p95_us": 145,
+      "p99_us": 203,
+      "max_us": 512,
+      "mean_us": 70.7,
+      "rc": 0,
+      "wall_s": 9.016462226998556
+     }
+    },
+    {
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 60,
+      "p95_us": 87,
+      "p99_us": 163,
+      "max_us": 630,
+      "mean_us": 63.1,
+      "rc": 0,
+      "wall_s": 9.014815828002611
+     }
+    }
+   ],
+   "sg-alone": [
+    {
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 295,
+      "p95_us": 466,
+      "p99_us": 565,
+      "max_us": 1172,
+      "mean_us": 302.4,
+      "rc": 0,
+      "wall_s": 9.017836218001321
+     },
+     "_sgd": {
+      "cpu_s": 0.09,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.015,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6458,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 312,
+      "p95_us": 514,
+      "p99_us": 634,
+      "max_us": 897,
+      "mean_us": 324.9,
+      "rc": 0,
+      "wall_s": 9.09103046999735
+     },
+     "_sgd": {
+      "cpu_s": 0.11,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.058,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6458,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 281,
+      "p95_us": 451,
+      "p99_us": 542,
+      "max_us": 865,
+      "mean_us": 287.7,
+      "rc": 0,
+      "wall_s": 9.03208648600048
+     },
+     "_sgd": {
+      "cpu_s": 0.09,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.02,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6458,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    }
+   ],
+   "none": [
+    {
+     "storm": {
+      "workers": 16,
+      "ops": 1361421,
+      "ops_per_s": 136134.5,
+      "errors": 0,
+      "sys_s": 67.413,
+      "rc": 0,
+      "wall_s": 10.012951986998814
+     },
+     "flood": {
+      "workers": 4,
+      "fork_failed": 0,
+      "ops": 4064,
+      "ops_per_s": 406.3,
+      "errors": 0,
+      "sys_s": 0.182,
+      "rc": 0,
+      "wall_s": 10.036693829999422
+     },
+     "cheap": {
+      "ops": 42123840,
+      "ops_per_s": 4212380.9,
+      "errors": 0,
+      "sys_s": 5.52,
+      "rc": 0,
+      "wall_s": 10.032669215997885
+     },
+     "victim": {
+      "ops": 888,
+      "errors": 0,
+      "p50_us": 33,
+      "p95_us": 8329,
+      "p99_us": 12070,
+      "max_us": 16428,
+      "mean_us": 1683.7,
+      "rc": 0,
+      "wall_s": 9.034376512001472
+     }
+    },
+    {
+     "storm": {
+      "workers": 16,
+      "ops": 1350202,
+      "ops_per_s": 135014.7,
+      "errors": 0,
+      "sys_s": 67.778,
+      "rc": 0,
+      "wall_s": 10.014657496998552
+     },
+     "flood": {
+      "workers": 4,
+      "fork_failed": 0,
+      "ops": 3927,
+      "ops_per_s": 392.7,
+      "errors": 0,
+      "sys_s": 0.159,
+      "rc": 0,
+      "wall_s": 10.030082450000918
+     },
+     "cheap": {
+      "ops": 39147968,
+      "ops_per_s": 3914794.6,
+      "errors": 0,
+      "sys_s": 5.472,
+      "rc": 0,
+      "wall_s": 10.035661840000103
+     },
+     "victim": {
+      "ops": 892,
+      "errors": 0,
+      "p50_us": 33,
+      "p95_us": 8318,
+      "p99_us": 12098,
+      "max_us": 15265,
+      "mean_us": 1714.1,
+      "rc": 0,
+      "wall_s": 9.013013619001867
+     }
+    },
+    {
+     "storm": {
+      "workers": 16,
+      "ops": 1339328,
+      "ops_per_s": 133926.9,
+      "errors": 0,
+      "sys_s": 67.457,
+      "rc": 0,
+      "wall_s": 10.014494519000436
+     },
+     "flood": {
+      "workers": 4,
+      "fork_failed": 0,
+      "ops": 4174,
+      "ops_per_s": 417.4,
+      "errors": 0,
+      "sys_s": 0.154,
+      "rc": 0,
+      "wall_s": 10.040080359001877
+     },
+     "cheap": {
+      "ops": 40289920,
+      "ops_per_s": 4028989.3,
+      "errors": 0,
+      "sys_s": 5.353,
+      "rc": 0,
+      "wall_s": 10.018133790999855
+     },
+     "victim": {
+      "ops": 890,
+      "errors": 0,
+      "p50_us": 33,
+      "p95_us": 8262,
+      "p99_us": 11981,
+      "max_us": 16250,
+      "mean_us": 1580.9,
+      "rc": 0,
+      "wall_s": 9.027981251998426
+     }
+    }
+   ],
+   "cgroup": [
+    {
+     "storm": {
+      "workers": 16,
+      "ops": 52788,
+      "ops_per_s": 5268.1,
+      "errors": 0,
+      "sys_s": 8.043,
+      "rc": 0,
+      "wall_s": 10.066191666002851
+     },
+     "flood": {
+      "workers": 4,
+      "fork_failed": 0,
+      "ops": 944,
+      "ops_per_s": 94.2,
+      "errors": 0,
+      "sys_s": 0.097,
+      "rc": 0,
+      "wall_s": 10.065284238000459
+     },
+     "cheap": {
+      "ops": 3561216,
+      "ops_per_s": 355892.7,
+      "errors": 0,
+      "sys_s": 0.964,
+      "rc": 0,
+      "wall_s": 10.044473129997641
+     },
+     "victim": {
+      "ops": 259,
+      "errors": 0,
+      "p50_us": 68,
+      "p95_us": 181997,
+      "p99_us": 196614,
+      "max_us": 205970,
+      "mean_us": 27100.9,
+      "rc": 0,
+      "wall_s": 9.059311779998097
+     }
+    },
+    {
+     "storm": {
+      "workers": 16,
+      "ops": 48458,
+      "ops_per_s": 4814.6,
+      "errors": 0,
+      "sys_s": 8.202,
+      "rc": 0,
+      "wall_s": 10.12336783399951
+     },
+     "flood": {
+      "workers": 4,
+      "fork_failed": 0,
+      "ops": 852,
+      "ops_per_s": 84.6,
+      "errors": 0,
+      "sys_s": 0.113,
+      "rc": 0,
+      "wall_s": 10.121793525999237
+     },
+     "cheap": {
+      "ops": 3280256,
+      "ops_per_s": 326247.7,
+      "errors": 0,
+      "sys_s": 0.997,
+      "rc": 0,
+      "wall_s": 10.110418520998792
+     },
+     "victim": {
+      "ops": 258,
+      "errors": 0,
+      "p50_us": 65,
+      "p95_us": 188996,
+      "p99_us": 197236,
+      "max_us": 203655,
+      "mean_us": 27145.9,
+      "rc": 0,
+      "wall_s": 9.118339559998276
+     }
+    },
+    {
+     "storm": {
+      "workers": 16,
+      "ops": 50706,
+      "ops_per_s": 5059.6,
+      "errors": 0,
+      "sys_s": 8.151,
+      "rc": 0,
+      "wall_s": 10.068999946000986
+     },
+     "flood": {
+      "workers": 4,
+      "fork_failed": 0,
+      "ops": 840,
+      "ops_per_s": 83.7,
+      "errors": 0,
+      "sys_s": 0.113,
+      "rc": 0,
+      "wall_s": 10.07808311899862
+     },
+     "cheap": {
+      "ops": 3349504,
+      "ops_per_s": 334250.9,
+      "errors": 0,
+      "sys_s": 1.064,
+      "rc": 0,
+      "wall_s": 10.06710600400038
+     },
+     "victim": {
+      "ops": 224,
+      "errors": 0,
+      "p50_us": 68,
+      "p95_us": 185093,
+      "p99_us": 193781,
+      "max_us": 205801,
+      "mean_us": 32536.1,
+      "rc": 0,
+      "wall_s": 9.025971636001486
+     }
+    }
+   ],
+   "uniform": [
+    {
+     "storm": {
+      "workers": 16,
+      "ops": 128046,
+      "ops_per_s": 12803.4,
+      "errors": 0,
+      "sys_s": 4.619,
+      "rc": 0,
+      "wall_s": 10.009096738998778
+     },
+     "flood": {
+      "workers": 4,
+      "fork_failed": 0,
+      "ops": 36736,
+      "ops_per_s": 3673.4,
+      "errors": 0,
+      "sys_s": 1.268,
+      "rc": 0,
+      "wall_s": 10.007775097998092
+     },
+     "cheap": {
+      "ops": 163200,
+      "ops_per_s": 16319.8,
+      "errors": 0,
+      "sys_s": 2.918,
+      "rc": 0,
+      "wall_s": 10.006806356999732
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 69,
+      "p95_us": 181,
+      "p99_us": 382,
+      "max_us": 638,
+      "mean_us": 83.6,
+      "rc": 0,
+      "wall_s": 9.022959188998357
+     },
+     "_sgd": {
+      "cpu_s": 2.59,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.02,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 1823,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "storm": {
+        "duration_s": 10.007,
+        "calls": 384207,
+        "allowed": 384207,
+        "waited": 14848,
+        "rejected": 0,
+        "charged": 384210,
+        "max_wait_ms": 9.6,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "flood": {
+        "duration_s": 10.007,
+        "calls": 73517,
+        "allowed": 73517,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 73520,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "cheap": {
+        "duration_s": 10.006,
+        "calls": 326422,
+        "allowed": 326422,
+        "waited": 500,
+        "rejected": 0,
+        "charged": 326425,
+        "max_wait_ms": 10.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "storm": {
+      "workers": 16,
+      "ops": 127482,
+      "ops_per_s": 12745.5,
+      "errors": 0,
+      "sys_s": 4.555,
+      "rc": 0,
+      "wall_s": 10.021354071999667
+     },
+     "flood": {
+      "workers": 4,
+      "fork_failed": 0,
+      "ops": 33402,
+      "ops_per_s": 3339.2,
+      "errors": 0,
+      "sys_s": 1.219,
+      "rc": 0,
+      "wall_s": 10.017336028999125
+     },
+     "cheap": {
+      "ops": 164416,
+      "ops_per_s": 16438.8,
+      "errors": 0,
+      "sys_s": 2.943,
+      "rc": 0,
+      "wall_s": 10.01477610800066
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 70,
+      "p95_us": 151,
+      "p99_us": 204,
+      "max_us": 647,
+      "mean_us": 80.0,
+      "rc": 0,
+      "wall_s": 9.015488934001041
+     },
+     "_sgd": {
+      "cpu_s": 2.51,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.013,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 1823,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "storm": {
+        "duration_s": 10.016,
+        "calls": 382515,
+        "allowed": 382515,
+        "waited": 14816,
+        "rejected": 0,
+        "charged": 382518,
+        "max_wait_ms": 9.3,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "flood": {
+        "duration_s": 10.014,
+        "calls": 66849,
+        "allowed": 66849,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 66852,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "cheap": {
+        "duration_s": 10.012,
+        "calls": 328854,
+        "allowed": 328854,
+        "waited": 514,
+        "rejected": 0,
+        "charged": 328857,
+        "max_wait_ms": 10.1,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "storm": {
+      "workers": 16,
+      "ops": 129845,
+      "ops_per_s": 12980.4,
+      "errors": 0,
+      "sys_s": 4.416,
+      "rc": 0,
+      "wall_s": 10.019204692998755
+     },
+     "flood": {
+      "workers": 4,
+      "fork_failed": 0,
+      "ops": 17934,
+      "ops_per_s": 1793.1,
+      "errors": 0,
+      "sys_s": 0.724,
+      "rc": 0,
+      "wall_s": 10.016731481999159
+     },
+     "cheap": {
+      "ops": 163328,
+      "ops_per_s": 16330.6,
+      "errors": 0,
+      "sys_s": 2.889,
+      "rc": 0,
+      "wall_s": 10.014883664996887
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 69,
+      "p95_us": 120,
+      "p99_us": 160,
+      "max_us": 286,
+      "mean_us": 73.4,
+      "rc": 0,
+      "wall_s": 9.013777029002085
+     },
+     "_sgd": {
+      "cpu_s": 2.29,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.012,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 1823,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "storm": {
+        "duration_s": 10.016,
+        "calls": 389604,
+        "allowed": 389604,
+        "waited": 15000,
+        "rejected": 0,
+        "charged": 389607,
+        "max_wait_ms": 10.1,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "flood": {
+        "duration_s": 10.014,
+        "calls": 35913,
+        "allowed": 35913,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 35916,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "cheap": {
+        "duration_s": 10.012,
+        "calls": 326678,
+        "allowed": 326678,
+        "waited": 648,
+        "rejected": 0,
+        "charged": 326681,
+        "max_wait_ms": 10.1,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    }
+   ],
+   "sg-noborrow": [
+    {
+     "storm": {
+      "workers": 16,
+      "ops": 35199,
+      "ops_per_s": 3517.0,
+      "errors": 0,
+      "sys_s": 2.206,
+      "rc": 0,
+      "wall_s": 10.031539014998998
+     },
+     "flood": {
+      "workers": 4,
+      "fork_failed": 0,
+      "ops": 262,
+      "ops_per_s": 26.1,
+      "errors": 0,
+      "sys_s": 0.043,
+      "rc": 0,
+      "wall_s": 10.06613175700113
+     },
+     "cheap": {
+      "ops": 92864,
+      "ops_per_s": 9286.2,
+      "errors": 0,
+      "sys_s": 2.711,
+      "rc": 0,
+      "wall_s": 10.020551555000566
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 124,
+      "p95_us": 191,
+      "p99_us": 249,
+      "max_us": 533,
+      "mean_us": 127.9,
+      "rc": 0,
+      "wall_s": 9.02420134500062
+     },
+     "_sgd": {
+      "cpu_s": 1.55,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.017,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6458,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "storm": {
+        "duration_s": 10.022,
+        "calls": 105666,
+        "allowed": 105666,
+        "waited": 15824,
+        "rejected": 0,
+        "charged": 390084,
+        "max_wait_ms": 9.7,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "cheap": {
+        "duration_s": 10.015,
+        "calls": 185750,
+        "allowed": 185750,
+        "waited": 775,
+        "rejected": 0,
+        "charged": 371622,
+        "max_wait_ms": 10.1,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "flood": {
+        "duration_s": 10.061,
+        "calls": 569,
+        "allowed": 569,
+        "waited": 435,
+        "rejected": 0,
+        "charged": 395177,
+        "max_wait_ms": 159.9,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "storm": {
+      "workers": 16,
+      "ops": 35290,
+      "ops_per_s": 3528.2,
+      "errors": 0,
+      "sys_s": 2.207,
+      "rc": 0,
+      "wall_s": 10.052940047997254
+     },
+     "flood": {
+      "workers": 4,
+      "fork_failed": 0,
+      "ops": 262,
+      "ops_per_s": 26.1,
+      "errors": 0,
+      "sys_s": 0.0,
+      "rc": 0,
+      "wall_s": 10.067599956000777
+     },
+     "cheap": {
+      "ops": 92032,
+      "ops_per_s": 9203.1,
+      "errors": 0,
+      "sys_s": 2.705,
+      "rc": 0,
+      "wall_s": 10.025928729999578
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 97,
+      "p95_us": 260,
+      "p99_us": 629,
+      "max_us": 1728,
+      "mean_us": 129.7,
+      "rc": 0,
+      "wall_s": 9.005590918000962
+     },
+     "_sgd": {
+      "cpu_s": 1.52,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.004,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6458,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "storm": {
+        "duration_s": 10.025,
+        "calls": 105939,
+        "allowed": 105939,
+        "waited": 15808,
+        "rejected": 0,
+        "charged": 391085,
+        "max_wait_ms": 9.7,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "cheap": {
+        "duration_s": 10.017,
+        "calls": 184086,
+        "allowed": 184086,
+        "waited": 785,
+        "rejected": 0,
+        "charged": 368294,
+        "max_wait_ms": 10.1,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "flood": {
+        "duration_s": 10.056,
+        "calls": 569,
+        "allowed": 569,
+        "waited": 432,
+        "rejected": 0,
+        "charged": 395177,
+        "max_wait_ms": 160.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "storm": {
+      "workers": 16,
+      "ops": 35208,
+      "ops_per_s": 3518.8,
+      "errors": 0,
+      "sys_s": 2.213,
+      "rc": 0,
+      "wall_s": 10.018241817000671
+     },
+     "flood": {
+      "workers": 4,
+      "fork_failed": 0,
+      "ops": 262,
+      "ops_per_s": 26.1,
+      "errors": 0,
+      "sys_s": 0.021,
+      "rc": 0,
+      "wall_s": 10.044775697999285
+     },
+     "cheap": {
+      "ops": 92992,
+      "ops_per_s": 9298.3,
+      "errors": 0,
+      "sys_s": 2.625,
+      "rc": 0,
+      "wall_s": 10.011819177001598
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 143,
+      "p95_us": 215,
+      "p99_us": 272,
+      "max_us": 1020,
+      "mean_us": 147.0,
+      "rc": 0,
+      "wall_s": 9.011992519001069
+     },
+     "_sgd": {
+      "cpu_s": 1.52,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.01,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6458,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "storm": {
+        "duration_s": 10.013,
+        "calls": 105693,
+        "allowed": 105693,
+        "waited": 15819,
+        "rejected": 0,
+        "charged": 390183,
+        "max_wait_ms": 9.8,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "cheap": {
+        "duration_s": 10.009,
+        "calls": 186006,
+        "allowed": 186006,
+        "waited": 772,
+        "rejected": 0,
+        "charged": 372134,
+        "max_wait_ms": 10.1,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "flood": {
+        "duration_s": 10.042,
+        "calls": 569,
+        "allowed": 569,
+        "waited": 435,
+        "rejected": 0,
+        "charged": 395177,
+        "max_wait_ms": 160.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    }
+   ],
+   "sg-full": [
+    {
+     "storm": {
+      "workers": 16,
+      "ops": 35191,
+      "ops_per_s": 3517.3,
+      "errors": 0,
+      "sys_s": 2.063,
+      "rc": 0,
+      "wall_s": 10.024203047996707
+     },
+     "flood": {
+      "workers": 4,
+      "fork_failed": 0,
+      "ops": 262,
+      "ops_per_s": 26.1,
+      "errors": 0,
+      "sys_s": 0.034,
+      "rc": 0,
+      "wall_s": 10.062454935999995
+     },
+     "cheap": {
+      "ops": 97280,
+      "ops_per_s": 9727.4,
+      "errors": 0,
+      "sys_s": 2.758,
+      "rc": 0,
+      "wall_s": 10.019361359001778
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 120,
+      "p95_us": 217,
+      "p99_us": 284,
+      "max_us": 511,
+      "mean_us": 128.8,
+      "rc": 0,
+      "wall_s": 9.015488314998947
+     },
+     "_sgd": {
+      "cpu_s": 1.55,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.014,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6458,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "storm": {
+        "duration_s": 10.02,
+        "calls": 105642,
+        "allowed": 105642,
+        "waited": 15771,
+        "rejected": 0,
+        "charged": 389996,
+        "max_wait_ms": 11.3,
+        "loans": 2696,
+        "borrowed": 28174,
+        "lent": 6666
+       },
+       "cheap": {
+        "duration_s": 10.017,
+        "calls": 194582,
+        "allowed": 194582,
+        "waited": 812,
+        "rejected": 0,
+        "charged": 389286,
+        "max_wait_ms": 10.1,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 58508
+       },
+       "flood": {
+        "duration_s": 10.06,
+        "calls": 569,
+        "allowed": 569,
+        "waited": 389,
+        "rejected": 0,
+        "charged": 395177,
+        "max_wait_ms": 320.0,
+        "loans": 17,
+        "borrowed": 36999,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "storm": {
+      "workers": 16,
+      "ops": 35200,
+      "ops_per_s": 3518.2,
+      "errors": 0,
+      "sys_s": 2.16,
+      "rc": 0,
+      "wall_s": 10.023178701001598
+     },
+     "flood": {
+      "workers": 4,
+      "fork_failed": 0,
+      "ops": 262,
+      "ops_per_s": 26.1,
+      "errors": 0,
+      "sys_s": 0.027,
+      "rc": 0,
+      "wall_s": 10.060298402000626
+     },
+     "cheap": {
+      "ops": 97344,
+      "ops_per_s": 9733.8,
+      "errors": 0,
+      "sys_s": 2.798,
+      "rc": 0,
+      "wall_s": 10.016568473998632
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 123,
+      "p95_us": 198,
+      "p99_us": 238,
+      "max_us": 647,
+      "mean_us": 126.1,
+      "rc": 0,
+      "wall_s": 9.016270611002255
+     },
+     "_sgd": {
+      "cpu_s": 1.59,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.01,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6458,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "storm": {
+        "duration_s": 10.018,
+        "calls": 105669,
+        "allowed": 105669,
+        "waited": 15760,
+        "rejected": 0,
+        "charged": 390095,
+        "max_wait_ms": 9.9,
+        "loans": 2868,
+        "borrowed": 27017,
+        "lent": 658
+       },
+       "cheap": {
+        "duration_s": 10.014,
+        "calls": 194710,
+        "allowed": 194710,
+        "waited": 777,
+        "rejected": 0,
+        "charged": 389542,
+        "max_wait_ms": 10.1,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 62721
+       },
+       "flood": {
+        "duration_s": 10.057,
+        "calls": 569,
+        "allowed": 569,
+        "waited": 389,
+        "rejected": 0,
+        "charged": 395177,
+        "max_wait_ms": 319.9,
+        "loans": 15,
+        "borrowed": 36362,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "storm": {
+      "workers": 16,
+      "ops": 35209,
+      "ops_per_s": 3518.7,
+      "errors": 0,
+      "sys_s": 2.206,
+      "rc": 0,
+      "wall_s": 10.014244443002099
+     },
+     "flood": {
+      "workers": 4,
+      "fork_failed": 0,
+      "ops": 262,
+      "ops_per_s": 26.1,
+      "errors": 0,
+      "sys_s": 0.029,
+      "rc": 0,
+      "wall_s": 10.052393332000065
+     },
+     "cheap": {
+      "ops": 97152,
+      "ops_per_s": 9714.6,
+      "errors": 0,
+      "sys_s": 2.795,
+      "rc": 0,
+      "wall_s": 10.008774631998676
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 103,
+      "p95_us": 180,
+      "p99_us": 255,
+      "max_us": 3233,
+      "mean_us": 111.4,
+      "rc": 0,
+      "wall_s": 9.01759004899941
+     },
+     "_sgd": {
+      "cpu_s": 1.56,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.015,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6458,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "storm": {
+        "duration_s": 10.011,
+        "calls": 105696,
+        "allowed": 105696,
+        "waited": 15792,
+        "rejected": 0,
+        "charged": 390194,
+        "max_wait_ms": 9.9,
+        "loans": 1473,
+        "borrowed": 28748,
+        "lent": 6666
+       },
+       "cheap": {
+        "duration_s": 10.007,
+        "calls": 194326,
+        "allowed": 194326,
+        "waited": 789,
+        "rejected": 0,
+        "charged": 388774,
+        "max_wait_ms": 10.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 57940
+       },
+       "flood": {
+        "duration_s": 10.049,
+        "calls": 569,
+        "allowed": 569,
+        "waited": 389,
+        "rejected": 0,
+        "charged": 395177,
+        "max_wait_ms": 320.1,
+        "loans": 14,
+        "borrowed": 35858,
+        "lent": 0
+       }
+      }
+     }
+    }
+   ]
+  },
+  "E4": {
+   "none": [
+    {
+     "forker": {
+      "workers": 16,
+      "forks": 757066,
+      "forks_per_s": 75702.2,
+      "eagain": 0,
+      "other_errors": 0,
+      "sys_s": 44.804,
+      "rc": 0,
+      "wall_s": 10.016816316998302
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 32,
+      "p95_us": 55,
+      "p99_us": 95,
+      "max_us": 137,
+      "mean_us": 35.9,
+      "rc": 0,
+      "wall_s": 9.003964389998146
+     }
+    },
+    {
+     "forker": {
+      "workers": 16,
+      "forks": 757659,
+      "forks_per_s": 75763.8,
+      "eagain": 0,
+      "other_errors": 0,
+      "sys_s": 45.279,
+      "rc": 0,
+      "wall_s": 10.015436854002473
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 33,
+      "p95_us": 58,
+      "p99_us": 125,
+      "max_us": 230,
+      "mean_us": 38.0,
+      "rc": 0,
+      "wall_s": 9.012316524997004
+     }
+    },
+    {
+     "forker": {
+      "workers": 16,
+      "forks": 769320,
+      "forks_per_s": 76930.1,
+      "eagain": 0,
+      "other_errors": 0,
+      "sys_s": 44.645,
+      "rc": 0,
+      "wall_s": 10.007184542999312
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 32,
+      "p95_us": 52,
+      "p99_us": 106,
+      "max_us": 301,
+      "mean_us": 36.7,
+      "rc": 0,
+      "wall_s": 9.007051177999529
+     }
+    }
+   ],
+   "cgroup": [
+    {
+     "forker": {
+      "workers": 16,
+      "forks": 29385,
+      "forks_per_s": 2921.2,
+      "eagain": 8259,
+      "other_errors": 0,
+      "sys_s": 5.969,
+      "rc": 0,
+      "wall_s": 10.071779347999836
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 55,
+      "p95_us": 82,
+      "p99_us": 121,
+      "max_us": 747,
+      "mean_us": 57.9,
+      "rc": 0,
+      "wall_s": 9.015680331998738
+     }
+    },
+    {
+     "forker": {
+      "workers": 16,
+      "forks": 34541,
+      "forks_per_s": 3441.7,
+      "eagain": 10005,
+      "other_errors": 0,
+      "sys_s": 5.949,
+      "rc": 0,
+      "wall_s": 10.213059408000845
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 52,
+      "p95_us": 76,
+      "p99_us": 105,
+      "max_us": 418,
+      "mean_us": 54.5,
+      "rc": 0,
+      "wall_s": 9.018511329999455
+     }
+    },
+    {
+     "forker": {
+      "workers": 16,
+      "forks": 35693,
+      "forks_per_s": 3566.0,
+      "eagain": 10496,
+      "other_errors": 0,
+      "sys_s": 5.721,
+      "rc": 0,
+      "wall_s": 10.051448702000926
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 53,
+      "p95_us": 77,
+      "p99_us": 122,
+      "max_us": 268,
+      "mean_us": 53.5,
+      "rc": 0,
+      "wall_s": 9.01114847899953
+     }
+    }
+   ],
+   "uniform": [
+    {
+     "forker": {
+      "workers": 16,
+      "forks": 353699,
+      "forks_per_s": 35367.3,
+      "eagain": 0,
+      "other_errors": 0,
+      "sys_s": 29.735,
+      "rc": 0,
+      "wall_s": 10.01859610899919
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 317,
+      "p95_us": 1243,
+      "p99_us": 1553,
+      "max_us": 1982,
+      "mean_us": 445.8,
+      "rc": 0,
+      "wall_s": 9.008709674999409
+     },
+     "_sgd": {
+      "cpu_s": 1.4,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.006,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 1823,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "forker": {
+        "duration_s": 10.014,
+        "calls": 353768,
+        "allowed": 353768,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 353771,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "forker": {
+      "workers": 16,
+      "forks": 348765,
+      "forks_per_s": 34873.7,
+      "eagain": 0,
+      "other_errors": 0,
+      "sys_s": 29.851,
+      "rc": 0,
+      "wall_s": 10.015037756998936
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 342,
+      "p95_us": 1371,
+      "p99_us": 1644,
+      "max_us": 2370,
+      "mean_us": 500.6,
+      "rc": 0,
+      "wall_s": 9.018005506000918
+     },
+     "_sgd": {
+      "cpu_s": 1.38,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.016,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 1823,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "forker": {
+        "duration_s": 10.01,
+        "calls": 348834,
+        "allowed": 348834,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 348837,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "forker": {
+      "workers": 16,
+      "forks": 350022,
+      "forks_per_s": 34998.8,
+      "eagain": 0,
+      "other_errors": 0,
+      "sys_s": 29.869,
+      "rc": 0,
+      "wall_s": 10.024823791001836
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 315,
+      "p95_us": 1200,
+      "p99_us": 1500,
+      "max_us": 2042,
+      "mean_us": 430.8,
+      "rc": 0,
+      "wall_s": 9.01701253000283
+     },
+     "_sgd": {
+      "cpu_s": 1.41,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.014,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 1823,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "forker": {
+        "duration_s": 10.018,
+        "calls": 350091,
+        "allowed": 350091,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 350094,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    }
+   ],
+   "sg-full": [
+    {
+     "forker": {
+      "workers": 16,
+      "forks": 4521,
+      "forks_per_s": 451.5,
+      "eagain": 0,
+      "other_errors": 0,
+      "sys_s": 1.124,
+      "rc": 0,
+      "wall_s": 10.032667259001755
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 260,
+      "p95_us": 429,
+      "p99_us": 538,
+      "max_us": 947,
+      "mean_us": 276.0,
+      "rc": 0,
+      "wall_s": 9.02819210099915
+     },
+     "_sgd": {
+      "cpu_s": 0.18,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.02,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6458,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "forker": {
+        "duration_s": 10.027,
+        "calls": 4590,
+        "allowed": 4590,
+        "waited": 3276,
+        "rejected": 0,
+        "charged": 757902,
+        "max_wait_ms": 69.9,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "forker": {
+      "workers": 16,
+      "forks": 4525,
+      "forks_per_s": 451.7,
+      "eagain": 0,
+      "other_errors": 0,
+      "sys_s": 1.138,
+      "rc": 0,
+      "wall_s": 10.032238210998912
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 264,
+      "p95_us": 571,
+      "p99_us": 755,
+      "max_us": 958,
+      "mean_us": 292.0,
+      "rc": 0,
+      "wall_s": 9.028193089001434
+     },
+     "_sgd": {
+      "cpu_s": 0.2,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.02,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6458,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "forker": {
+        "duration_s": 10.026,
+        "calls": 4594,
+        "allowed": 4594,
+        "waited": 3295,
+        "rejected": 0,
+        "charged": 758570,
+        "max_wait_ms": 69.8,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "forker": {
+      "workers": 16,
+      "forks": 4519,
+      "forks_per_s": 451.4,
+      "eagain": 0,
+      "other_errors": 0,
+      "sys_s": 1.054,
+      "rc": 0,
+      "wall_s": 10.020414320999407
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 229,
+      "p95_us": 382,
+      "p99_us": 488,
+      "max_us": 818,
+      "mean_us": 234.7,
+      "rc": 0,
+      "wall_s": 9.02839576200131
+     },
+     "_sgd": {
+      "cpu_s": 0.18,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.019,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6458,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "forker": {
+        "duration_s": 10.016,
+        "calls": 4588,
+        "allowed": 4588,
+        "waited": 3295,
+        "rejected": 0,
+        "charged": 757568,
+        "max_wait_ms": 69.9,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    }
+   ],
+   "sg-full-reject": [
+    {
+     "forker": {
+      "workers": 16,
+      "forks": 4488,
+      "forks_per_s": 448.1,
+      "eagain": 8008,
+      "other_errors": 0,
+      "sys_s": 1.146,
+      "rc": 0,
+      "wall_s": 10.036823075999564
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 294,
+      "p95_us": 472,
+      "p99_us": 555,
+      "max_us": 662,
+      "mean_us": 302.5,
+      "rc": 0,
+      "wall_s": 9.05555082200226
+     },
+     "_sgd": {
+      "cpu_s": 0.25,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.046,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6458,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "forker": {
+        "duration_s": 10.032,
+        "calls": 12565,
+        "allowed": 4557,
+        "waited": 0,
+        "rejected": 8008,
+        "charged": 752391,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "forker": {
+      "workers": 16,
+      "forks": 4512,
+      "forks_per_s": 450.6,
+      "eagain": 8072,
+      "other_errors": 0,
+      "sys_s": 1.308,
+      "rc": 0,
+      "wall_s": 10.03047924099883
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 276,
+      "p95_us": 429,
+      "p99_us": 536,
+      "max_us": 864,
+      "mean_us": 281.5,
+      "rc": 0,
+      "wall_s": 9.025621880999097
+     },
+     "_sgd": {
+      "cpu_s": 0.27,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.015,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6458,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "forker": {
+        "duration_s": 10.027,
+        "calls": 12653,
+        "allowed": 4581,
+        "waited": 0,
+        "rejected": 8072,
+        "charged": 756399,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "forker": {
+      "workers": 16,
+      "forks": 4509,
+      "forks_per_s": 450.4,
+      "eagain": 8040,
+      "other_errors": 0,
+      "sys_s": 1.232,
+      "rc": 0,
+      "wall_s": 10.032975475998683
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 315,
+      "p95_us": 501,
+      "p99_us": 592,
+      "max_us": 732,
+      "mean_us": 323.8,
+      "rc": 0,
+      "wall_s": 9.020484234999458
+     },
+     "_sgd": {
+      "cpu_s": 0.27,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.013,
+        "calls": 1820,
+        "allowed": 1820,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6458,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "forker": {
+        "duration_s": 10.029,
+        "calls": 12618,
+        "allowed": 4578,
+        "waited": 0,
+        "rejected": 8040,
+        "charged": 755898,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    }
+   ]
+  },
+  "E5": {
+   "rate": 20000,
+   "records": 10000,
+   "sg-noborrow": [
+    {
+     "neighbour": {
+      "rc": -15,
+      "wall_s": 4.583377629998722
+     },
+     "burst": {
+      "rc": 0,
+      "wall_s": 3.071618674999627
+     },
+     "_sgd": {
+      "cpu_s": 0.26,
+      "jobs": {
+       "burst": {
+        "duration_s": 3.067,
+        "calls": 20067,
+        "allowed": 20067,
+        "waited": 297,
+        "rejected": 0,
+        "charged": 40652,
+        "max_wait_ms": 9.7,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "neighbour": {
+        "duration_s": 4.58,
+        "calls": 65,
+        "allowed": 65,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 644,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "neighbour": {
+      "rc": -15,
+      "wall_s": 4.601146071003313
+     },
+     "burst": {
+      "rc": 0,
+      "wall_s": 3.088671956997132
+     },
+     "_sgd": {
+      "cpu_s": 0.31,
+      "jobs": {
+       "burst": {
+        "duration_s": 3.08,
+        "calls": 20067,
+        "allowed": 20067,
+        "waited": 297,
+        "rejected": 0,
+        "charged": 40652,
+        "max_wait_ms": 9.9,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "neighbour": {
+        "duration_s": 4.59,
+        "calls": 65,
+        "allowed": 65,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 644,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "neighbour": {
+      "rc": -15,
+      "wall_s": 4.601082567001868
+     },
+     "burst": {
+      "rc": 0,
+      "wall_s": 3.08817027799887
+     },
+     "_sgd": {
+      "cpu_s": 0.28,
+      "jobs": {
+       "burst": {
+        "duration_s": 3.08,
+        "calls": 20067,
+        "allowed": 20067,
+        "waited": 297,
+        "rejected": 0,
+        "charged": 40652,
+        "max_wait_ms": 9.4,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "neighbour": {
+        "duration_s": 4.597,
+        "calls": 65,
+        "allowed": 65,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 644,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    }
+   ],
+   "sg-full": [
+    {
+     "neighbour": {
+      "rc": -15,
+      "wall_s": 4.096802234998904
+     },
+     "burst": {
+      "rc": 0,
+      "wall_s": 2.584882128998288
+     },
+     "_sgd": {
+      "cpu_s": 0.25,
+      "jobs": {
+       "burst": {
+        "duration_s": 2.579,
+        "calls": 20067,
+        "allowed": 20067,
+        "waited": 242,
+        "rejected": 0,
+        "charged": 40652,
+        "max_wait_ms": 10.1,
+        "loans": 626,
+        "borrowed": 17331,
+        "lent": 0
+       },
+       "neighbour": {
+        "duration_s": 4.09,
+        "calls": 65,
+        "allowed": 65,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 644,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 17331
+       }
+      }
+     }
+    },
+    {
+     "neighbour": {
+      "rc": -15,
+      "wall_s": 4.095924171000661
+     },
+     "burst": {
+      "rc": 0,
+      "wall_s": 2.584090643998934
+     },
+     "_sgd": {
+      "cpu_s": 0.24,
+      "jobs": {
+       "burst": {
+        "duration_s": 2.576,
+        "calls": 20067,
+        "allowed": 20067,
+        "waited": 243,
+        "rejected": 0,
+        "charged": 40652,
+        "max_wait_ms": 9.4,
+        "loans": 620,
+        "borrowed": 17331,
+        "lent": 0
+       },
+       "neighbour": {
+        "duration_s": 4.091,
+        "calls": 65,
+        "allowed": 65,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 644,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 17331
+       }
+      }
+     }
+    },
+    {
+     "neighbour": {
+      "rc": -15,
+      "wall_s": 4.096716840998852
+     },
+     "burst": {
+      "rc": 0,
+      "wall_s": 2.584690863997821
+     },
+     "_sgd": {
+      "cpu_s": 0.28,
+      "jobs": {
+       "burst": {
+        "duration_s": 2.577,
+        "calls": 20067,
+        "allowed": 20067,
+        "waited": 239,
+        "rejected": 0,
+        "charged": 40652,
+        "max_wait_ms": 9.8,
+        "loans": 676,
+        "borrowed": 17354,
+        "lent": 0
+       },
+       "neighbour": {
+        "duration_s": 4.093,
+        "calls": 65,
+        "allowed": 65,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 644,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 17354
+       }
+      }
+     }
+    }
+   ]
+  },
+  "E6": {
+   "rate": 19214,
+   "sg-full-reject": [
+    {
+     "build": {
+      "rc": 0,
+      "wall_s": 1.7411948750013835
+     },
+     "_sgd": {
+      "cpu_s": 0.06,
+      "jobs": {
+       "build": {
+        "duration_s": 1.737,
+        "calls": 11810,
+        "allowed": 11806,
+        "waited": 36,
+        "rejected": 4,
+        "charged": 48318,
+        "max_wait_ms": 9.7,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "build": {
+      "rc": 2,
+      "wall_s": 1.2960749030025909,
+      "stderr": "make: cc: Resource temporarily unavailable\nmake: *** [Makefile:33: build/sg-launch.o] Error 127\nmake: *** Waiting for unfinished jobs...."
+     },
+     "_sgd": {
+      "cpu_s": 0.02,
+      "jobs": {
+       "build": {
+        "duration_s": 1.292,
+        "calls": 5752,
+        "allowed": 5750,
+        "waited": 13,
+        "rejected": 2,
+        "charged": 26118,
+        "max_wait_ms": 9.9,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "build": {
+      "rc": 2,
+      "wall_s": 1.2464592889991764,
+      "stderr": "make: cc: Resource temporarily unavailable\nmake: *** [Makefile:33: build/sg-launch.o] Error 127\nmake: *** Waiting for unfinished jobs...."
+     },
+     "_sgd": {
+      "cpu_s": 0.03,
+      "jobs": {
+       "build": {
+        "duration_s": 1.242,
+        "calls": 5740,
+        "allowed": 5737,
+        "waited": 6,
+        "rejected": 3,
+        "charged": 26105,
+        "max_wait_ms": 9.8,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    }
+   ],
+   "sg-full-brief": [
+    {
+     "build": {
+      "rc": 0,
+      "wall_s": 1.5364515449982719
+     },
+     "_sgd": {
+      "cpu_s": 0.07,
+      "jobs": {
+       "build": {
+        "duration_s": 1.532,
+        "calls": 11808,
+        "allowed": 11808,
+        "waited": 383,
+        "rejected": 0,
+        "charged": 48318,
+        "max_wait_ms": 18.8,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "build": {
+      "rc": 0,
+      "wall_s": 1.685867035001138
+     },
+     "_sgd": {
+      "cpu_s": 0.06,
+      "jobs": {
+       "build": {
+        "duration_s": 1.681,
+        "calls": 11817,
+        "allowed": 11817,
+        "waited": 318,
+        "rejected": 0,
+        "charged": 48327,
+        "max_wait_ms": 17.3,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "build": {
+      "rc": 0,
+      "wall_s": 2.6908853960012493
+     },
+     "_sgd": {
+      "cpu_s": 0.08,
+      "jobs": {
+       "build": {
+        "duration_s": 2.685,
+        "calls": 11811,
+        "allowed": 11811,
+        "waited": 313,
+        "rejected": 0,
+        "charged": 48323,
+        "max_wait_ms": 19.9,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    }
+   ],
+   "sg-full-wait": [
+    {
+     "build": {
+      "rc": 0,
+      "wall_s": 1.5339138050003385
+     },
+     "_sgd": {
+      "cpu_s": 0.09,
+      "jobs": {
+       "build": {
+        "duration_s": 1.529,
+        "calls": 11824,
+        "allowed": 11824,
+        "waited": 344,
+        "rejected": 0,
+        "charged": 48338,
+        "max_wait_ms": 19.9,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "build": {
+      "rc": 0,
+      "wall_s": 1.531214031001582
+     },
+     "_sgd": {
+      "cpu_s": 0.07,
+      "jobs": {
+       "build": {
+        "duration_s": 1.528,
+        "calls": 11804,
+        "allowed": 11804,
+        "waited": 396,
+        "rejected": 0,
+        "charged": 48316,
+        "max_wait_ms": 19.7,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    },
+    {
+     "build": {
+      "rc": 0,
+      "wall_s": 1.5288417859992478
+     },
+     "_sgd": {
+      "cpu_s": 0.07,
+      "jobs": {
+       "build": {
+        "duration_s": 1.525,
+        "calls": 11824,
+        "allowed": 11824,
+        "waited": 402,
+        "rejected": 0,
+        "charged": 48334,
+        "max_wait_ms": 19.8,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      }
+     }
+    }
+   ]
+  }
+ }
+}
