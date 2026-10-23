@@ -13,6 +13,8 @@ EVAL_BINS := $(BUILD)/victim $(BUILD)/fsync_flood $(BUILD)/cheap_io $(BUILD)/for
 
 .PHONY: all test calibrate eval-bins evaluate diagnose clean
 
+all: $(BINS)
+
 # Wake-up latency diagnostics; root enables the per-stage tracing.
 diagnose: all $(EVAL_BINS)
 	sudo python3 eval/diagnose.py
@@ -30,8 +32,6 @@ evaluate: all $(EVAL_BINS)
 calibrate: $(BUILD)/sgd
 	mkdir -p costs
 	sudo python3 tools/sg_calibrate.py -o costs/$$(uname -r).conf
-
-all: $(BINS)
 
 $(BUILD)/%.o: src/%.c $(HEADERS) | $(BUILD)
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $<

@@ -1,0 +1,2301 @@
+{
+ "meta": {
+  "label": "wsl2-6.6-report",
+  "host": "Swayamp",
+  "kernel": "6.6.114.1-microsoft-standard-WSL2",
+  "cpus": 10,
+  "date": "2026-10-23 16:58 UTC",
+  "reps": 3,
+  "duration": 10,
+  "interval_ms": 10,
+  "costs": "costs/wsl2-6.6.conf"
+ },
+ "results": {
+  "wakeup": {
+   "none": {
+    "runs": [
+     {
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 58,
+       "p95_us": 121,
+       "p99_us": 158,
+       "max_us": 186,
+       "mean_us": 62.5,
+       "rq_wait_us": 6479,
+       "rc": 0,
+       "wall_s": 9.015762635999636
+      }
+     },
+     {
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 54,
+       "p95_us": 85,
+       "p99_us": 122,
+       "max_us": 212,
+       "mean_us": 55.0,
+       "rq_wait_us": 11012,
+       "rc": 0,
+       "wall_s": 9.01084533699941
+      }
+     },
+     {
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 55,
+       "p95_us": 74,
+       "p99_us": 91,
+       "max_us": 188,
+       "mean_us": 54.1,
+       "rq_wait_us": 1959,
+       "rc": 0,
+       "wall_s": 9.021689917999538
+      }
+     }
+    ],
+    "traced": {
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 80,
+      "p95_us": 149,
+      "p99_us": 174,
+      "max_us": 244,
+      "mean_us": 85.6,
+      "rq_wait_us": 7392,
+      "rc": 0,
+      "wall_s": 9.019970074999947
+     },
+     "_trace": {
+      "segments": {
+       "total": {
+        "count": 1805,
+        "mean_us": 35.84141662049862,
+        "p50_us": 31.07669616519174,
+        "p90_us": 51.90140845070423,
+        "p99_us": 114.21428571428578
+       },
+       "kernel": {
+        "count": 1805,
+        "mean_us": 35.84141662049862,
+        "p50_us": 31.07669616519174,
+        "p90_us": 51.90140845070423,
+        "p99_us": 114.21428571428578
+       },
+       "victim_wake": {
+        "count": 903,
+        "mean_us": 19.27401550387597,
+        "p50_us": 14.676190476190477,
+        "p90_us": 33.34615384615387,
+        "p99_us": 106.21250000000003
+       }
+      },
+      "where": {
+       "victim_other_cpu": 15,
+       "victim_same_cpu": 888
+      }
+     }
+    }
+   },
+   "sg-full": {
+    "runs": [
+     {
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 277,
+       "p95_us": 439,
+       "p99_us": 524,
+       "max_us": 1035,
+       "mean_us": 277.1,
+       "rq_wait_us": 7173,
+       "rc": 0,
+       "wall_s": 9.031903122000585
+      },
+      "_sgd": {
+       "cpu_s": 0.09,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.025,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 6468,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 1801,
+        "nr_switches": 2820,
+        "nr_voluntary_switches": 2820
+       }
+      }
+     },
+     {
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 275,
+       "p95_us": 417,
+       "p99_us": 505,
+       "max_us": 731,
+       "mean_us": 279.1,
+       "rq_wait_us": 8020,
+       "rc": 0,
+       "wall_s": 9.019581123000535
+      },
+      "_sgd": {
+       "cpu_s": 0.08,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.012,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 6468,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 1810,
+        "nr_switches": 2819,
+        "nr_voluntary_switches": 2819
+       }
+      }
+     },
+     {
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 278,
+       "p95_us": 438,
+       "p99_us": 507,
+       "max_us": 797,
+       "mean_us": 279.9,
+       "rq_wait_us": 7189,
+       "rc": 0,
+       "wall_s": 9.021940773000097
+      },
+      "_sgd": {
+       "cpu_s": 0.08,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.016,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 6468,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 1808,
+        "nr_switches": 2818,
+        "nr_voluntary_switches": 2818
+       }
+      }
+     }
+    ],
+    "traced": {
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 364,
+      "p95_us": 575,
+      "p99_us": 671,
+      "max_us": 810,
+      "mean_us": 366.5,
+      "rq_wait_us": 12043,
+      "rc": 0,
+      "wall_s": 9.024448631000269
+     },
+     "_sgd": {
+      "cpu_s": 0.13,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.014,
+        "calls": 1824,
+        "allowed": 1824,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6468,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      },
+      "sched": {
+       "se.nr_migrations": 1815,
+       "nr_switches": 2971,
+       "nr_voluntary_switches": 2970
+      }
+     },
+     "_trace": {
+      "segments": {
+       "total": {
+        "count": 1805,
+        "mean_us": 162.88644487534626,
+        "p50_us": 161.3679245283019,
+        "p90_us": 240.1219512195122,
+        "p99_us": 344.7500000000002
+       },
+       "seccomp": {
+        "count": 1805,
+        "mean_us": 135.34668476454294,
+        "p50_us": 133.28703703703704,
+        "p90_us": 206.14583333333334,
+        "p99_us": 289.93750000000006
+       },
+       "to_sgd": {
+        "count": 1805,
+        "mean_us": 115.8184781163435,
+        "p50_us": 114.0530303030303,
+        "p90_us": 178.69047619047618,
+        "p99_us": 258.83333333333337
+       },
+       "to_wakeup": {
+        "count": 1805,
+        "mean_us": 85.06411024930748,
+        "p50_us": 81.75977653631286,
+        "p90_us": 129.0,
+        "p99_us": 198.83333333333337
+       },
+       "filter": {
+        "count": 1805,
+        "mean_us": 5.330951800554017,
+        "p50_us": 3.91,
+        "p90_us": 9.842307692307692,
+        "p99_us": 19.184375000000003
+       },
+       "notify": {
+        "count": 1805,
+        "mean_us": 2.7513617728531856,
+        "p50_us": 2.05,
+        "p90_us": 5.1537037037037035,
+        "p99_us": 6.595000000000004
+       },
+       "cpu_wake": {
+        "count": 1805,
+        "mean_us": 76.98179667590027,
+        "p50_us": 73.5201793721973,
+        "p90_us": 118.6,
+        "p99_us": 187.07142857142864
+       },
+       "sgd_sched": {
+        "count": 1805,
+        "mean_us": 10.310746260387813,
+        "p50_us": 8.889285714285714,
+        "p90_us": 19.046546546546544,
+        "p99_us": 54.875000000000114
+       },
+       "sgd_to_recv": {
+        "count": 1805,
+        "mean_us": 15.349812742382271,
+        "p50_us": 14.535759096612296,
+        "p90_us": 26.571100917431192,
+        "p99_us": 37.194444444444464
+       },
+       "recv": {
+        "count": 1805,
+        "mean_us": 5.093808864265927,
+        "p50_us": 5.428947368421053,
+        "p90_us": 7.772916666666667,
+        "p99_us": 10.633333333333363
+       },
+       "decide": {
+        "count": 1805,
+        "mean_us": 4.948193905817175,
+        "p50_us": 4.940243902439025,
+        "p90_us": 7.075,
+        "p99_us": 13.30555555555558
+       },
+       "back": {
+        "count": 1805,
+        "mean_us": 14.580012742382273,
+        "p50_us": 13.78393665158371,
+        "p90_us": 25.149253731343283,
+        "p99_us": 29.998507462686568
+       },
+       "kernel": {
+        "count": 1805,
+        "mean_us": 27.53976011080332,
+        "p50_us": 26.502702702702702,
+        "p90_us": 37.72286821705426,
+        "p99_us": 66.95000000000005
+       },
+       "sgd_wake": {
+        "count": 2764,
+        "mean_us": 12.86916497829233,
+        "p50_us": 10.375106564364875,
+        "p90_us": 19.80051150895141,
+        "p99_us": 93.35000000000008
+       },
+       "victim_wake": {
+        "count": 2724,
+        "mean_us": 7.95165785609398,
+        "p50_us": 7.020833333333333,
+        "p90_us": 16.315217391304348,
+        "p99_us": 28.700000000000042
+       }
+      },
+      "where": {
+       "victim_other_cpu": 23,
+       "sgd_same_cpu": 886,
+       "sgd_other_cpu": 1878,
+       "victim_same_cpu": 2701
+      }
+     }
+    }
+   },
+   "sg-full-nosync": {
+    "runs": [
+     {
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 389,
+       "p95_us": 586,
+       "p99_us": 664,
+       "max_us": 722,
+       "mean_us": 368.6,
+       "rq_wait_us": 12408,
+       "rc": 0,
+       "wall_s": 9.022722814999725
+      },
+      "_sgd": {
+       "cpu_s": 0.11,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.016,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 6468,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 34,
+        "nr_switches": 2817,
+        "nr_voluntary_switches": 2817
+       }
+      }
+     },
+     {
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 383,
+       "p95_us": 577,
+       "p99_us": 696,
+       "max_us": 1129,
+       "mean_us": 368.8,
+       "rq_wait_us": 1861,
+       "rc": 0,
+       "wall_s": 9.015448030999323
+      },
+      "_sgd": {
+       "cpu_s": 0.11,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.012,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 6468,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 37,
+        "nr_switches": 2818,
+        "nr_voluntary_switches": 2818
+       }
+      }
+     },
+     {
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 399,
+       "p95_us": 626,
+       "p99_us": 771,
+       "max_us": 2085,
+       "mean_us": 395.4,
+       "rq_wait_us": 3103,
+       "rc": 0,
+       "wall_s": 9.01858237399938
+      },
+      "_sgd": {
+       "cpu_s": 0.13,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.009,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 6468,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 51,
+        "nr_switches": 2818,
+        "nr_voluntary_switches": 2818
+       }
+      }
+     }
+    ],
+    "traced": {
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 519,
+      "p95_us": 769,
+      "p99_us": 887,
+      "max_us": 1110,
+      "mean_us": 507.2,
+      "rq_wait_us": 6642,
+      "rc": 0,
+      "wall_s": 9.023449571999663
+     },
+     "_sgd": {
+      "cpu_s": 0.17,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.017,
+        "calls": 1824,
+        "allowed": 1824,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6468,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      },
+      "sched": {
+       "se.nr_migrations": 50,
+       "nr_switches": 2956,
+       "nr_voluntary_switches": 2956
+      }
+     },
+     "_trace": {
+      "segments": {
+       "total": {
+        "count": 1805,
+        "mean_us": 229.68260997229916,
+        "p50_us": 228.2,
+        "p90_us": 358.7037037037037,
+        "p99_us": 476.50000000000017
+       },
+       "seccomp": {
+        "count": 1805,
+        "mean_us": 199.65421495844876,
+        "p50_us": 197.56944444444443,
+        "p90_us": 321.6666666666667,
+        "p99_us": 433.1666666666668
+       },
+       "to_sgd": {
+        "count": 1805,
+        "mean_us": 115.43510637119114,
+        "p50_us": 113.43971631205675,
+        "p90_us": 183.78787878787878,
+        "p99_us": 289.91666666666674
+       },
+       "to_wakeup": {
+        "count": 1804,
+        "mean_us": 83.57312694013304,
+        "p50_us": 80.94736842105263,
+        "p90_us": 132.8627450980392,
+        "p99_us": 215.92000000000004
+       },
+       "filter": {
+        "count": 1805,
+        "mean_us": 6.308845429362881,
+        "p50_us": 4.7875,
+        "p90_us": 12.305825242718447,
+        "p99_us": 31.90000000000009
+       },
+       "notify": {
+        "count": 1804,
+        "mean_us": 3.1528447893569846,
+        "p50_us": 3.1680851063829785,
+        "p90_us": 4.52375,
+        "p99_us": 7.732000000000001
+       },
+       "cpu_wake": {
+        "count": 1804,
+        "mean_us": 74.10946175166296,
+        "p50_us": 71.0344827586207,
+        "p90_us": 118.83636363636361,
+        "p99_us": 194.9333333333334
+       },
+       "sgd_sched": {
+        "count": 1804,
+        "mean_us": 11.576574279379157,
+        "p50_us": 10.275449101796406,
+        "p90_us": 18.91736526946108,
+        "p99_us": 58.26666666666673
+       },
+       "sgd_to_recv": {
+        "count": 1804,
+        "mean_us": 15.249920177383592,
+        "p50_us": 13.682432432432433,
+        "p90_us": 25.635087719298244,
+        "p99_us": 99.90000000000009
+       },
+       "recv": {
+        "count": 1805,
+        "mean_us": 5.089247091412743,
+        "p50_us": 5.004838709677419,
+        "p90_us": 7.254761904761905,
+        "p99_us": 17.595238095238116
+       },
+       "decide": {
+        "count": 1805,
+        "mean_us": 5.4032027700831025,
+        "p50_us": 4.871951219512195,
+        "p90_us": 7.0205882352941185,
+        "p99_us": 34.75000000000023
+       },
+       "back": {
+        "count": 1805,
+        "mean_us": 78.81590581717451,
+        "p50_us": 72.4054054054054,
+        "p90_us": 133.29545454545456,
+        "p99_us": 232.78571428571433
+       },
+       "kernel": {
+        "count": 1805,
+        "mean_us": 30.028395013850414,
+        "p50_us": 27.799461641991925,
+        "p90_us": 39.41821247892074,
+        "p99_us": 107.90000000000009
+       },
+       "sgd_wake": {
+        "count": 2759,
+        "mean_us": 12.818653860094237,
+        "p50_us": 11.66044776119403,
+        "p90_us": 19.89626865671642,
+        "p99_us": 60.68333333333309
+       },
+       "victim_wake": {
+        "count": 2724,
+        "mean_us": 9.833579295154184,
+        "p50_us": 7.593333333333333,
+        "p90_us": 18.52387096774193,
+        "p99_us": 83.66153846153863
+       }
+      },
+      "where": {
+       "victim_same_cpu": 873,
+       "sgd_same_cpu": 890,
+       "victim_other_cpu": 1851,
+       "sgd_other_cpu": 1869
+      }
+     }
+    }
+   },
+   "sg-full-spin": {
+    "runs": [
+     {
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 276,
+       "p95_us": 578,
+       "p99_us": 765,
+       "max_us": 989,
+       "mean_us": 295.4,
+       "rq_wait_us": 1980,
+       "rc": 0,
+       "wall_s": 9.020371828999487
+      },
+      "_sgd": {
+       "cpu_s": 0.33,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.013,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 6468,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 9,
+        "nr_switches": 1975,
+        "nr_voluntary_switches": 1975
+       }
+      }
+     },
+     {
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 272,
+       "p95_us": 588,
+       "p99_us": 729,
+       "max_us": 899,
+       "mean_us": 289.1,
+       "rq_wait_us": 4128,
+       "rc": 0,
+       "wall_s": 9.02179802899991
+      },
+      "_sgd": {
+       "cpu_s": 0.33,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.017,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 6468,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 43,
+        "nr_switches": 1982,
+        "nr_voluntary_switches": 1982
+       }
+      }
+     },
+     {
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 286,
+       "p95_us": 619,
+       "p99_us": 758,
+       "max_us": 932,
+       "mean_us": 313.2,
+       "rq_wait_us": 7416,
+       "rc": 0,
+       "wall_s": 9.019296116999612
+      },
+      "_sgd": {
+       "cpu_s": 0.34,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.011,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 6468,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 43,
+        "nr_switches": 2003,
+        "nr_voluntary_switches": 2003
+       }
+      }
+     }
+    ],
+    "traced": {
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 400,
+      "p95_us": 825,
+      "p99_us": 931,
+      "max_us": 1107,
+      "mean_us": 460.7,
+      "rq_wait_us": 6010,
+      "rc": 0,
+      "wall_s": 9.031587503999617
+     },
+     "_sgd": {
+      "cpu_s": 0.41,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.021,
+        "calls": 1824,
+        "allowed": 1824,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6468,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      },
+      "sched": {
+       "se.nr_migrations": 24,
+       "nr_switches": 2340,
+       "nr_voluntary_switches": 2340
+      }
+     },
+     "_trace": {
+      "segments": {
+       "total": {
+        "count": 1805,
+        "mean_us": 207.14857617728532,
+        "p50_us": 219.26470588235296,
+        "p90_us": 369.8780487804878,
+        "p99_us": 479.8750000000001
+       },
+       "seccomp": {
+        "count": 1805,
+        "mean_us": 178.06613351800556,
+        "p50_us": 189.20454545454544,
+        "p90_us": 331.7741935483871,
+        "p99_us": 433.25000000000006
+       },
+       "to_sgd": {
+        "count": 1805,
+        "mean_us": 90.27573628808864,
+        "p50_us": 101.07954545454545,
+        "p90_us": 174.14893617021278,
+        "p99_us": 249.91666666666674
+       },
+       "to_wakeup": {
+        "count": 1199,
+        "mean_us": 97.84628523769808,
+        "p50_us": 95.74534161490683,
+        "p90_us": 145.63999999999996,
+        "p99_us": 207.52499999999998
+       },
+       "filter": {
+        "count": 1805,
+        "mean_us": 6.73994515235457,
+        "p50_us": 5.405555555555556,
+        "p90_us": 15.030395136778116,
+        "p99_us": 19.96808510638298
+       },
+       "notify": {
+        "count": 1199,
+        "mean_us": 4.389320266889074,
+        "p50_us": 4.233035714285714,
+        "p90_us": 5.316315789473684,
+        "p99_us": 9.6005
+       },
+       "cpu_wake": {
+        "count": 1199,
+        "mean_us": 84.7451142618849,
+        "p50_us": 82.74691358024691,
+        "p90_us": 128.59999999999997,
+        "p99_us": 185.72857142857143
+       },
+       "sgd_sched": {
+        "count": 1199,
+        "mean_us": 11.327198498748958,
+        "p50_us": 10.877926421404682,
+        "p90_us": 18.897993311036785,
+        "p99_us": 35.01666666666665
+       },
+       "sgd_to_recv": {
+        "count": 1199,
+        "mean_us": 16.404971643035864,
+        "p50_us": 15.501336898395722,
+        "p90_us": 26.063559322033893,
+        "p99_us": 48.01999999999999
+       },
+       "recv": {
+        "count": 1805,
+        "mean_us": 4.4540542936288094,
+        "p50_us": 4.534090909090909,
+        "p90_us": 7.402173913043478,
+        "p99_us": 14.975000000000021
+       },
+       "decide": {
+        "count": 1805,
+        "mean_us": 4.589503047091412,
+        "p50_us": 4.525,
+        "p90_us": 7.386111111111111,
+        "p99_us": 16.380000000000017
+       },
+       "back": {
+        "count": 1805,
+        "mean_us": 83.2008941828255,
+        "p50_us": 77.40566037735849,
+        "p90_us": 169.02597402597402,
+        "p99_us": 217.95000000000005
+       },
+       "kernel": {
+        "count": 1805,
+        "mean_us": 29.082442659279778,
+        "p50_us": 28.68382352941176,
+        "p90_us": 39.1799709724238,
+        "p99_us": 64.87500000000011
+       },
+       "sgd_wake": {
+        "count": 2145,
+        "mean_us": 13.22539766899767,
+        "p50_us": 12.633587786259543,
+        "p90_us": 19.91094147582697,
+        "p99_us": 45.91666666666697
+       },
+       "victim_wake": {
+        "count": 2724,
+        "mean_us": 9.397009544787077,
+        "p50_us": 7.966666666666667,
+        "p90_us": 18.877358490566035,
+        "p99_us": 60.690909090909294
+       }
+      },
+      "where": {
+       "victim_same_cpu": 868,
+       "sgd_same_cpu": 930,
+       "sgd_other_cpu": 1215,
+       "victim_other_cpu": 1856
+      }
+     }
+    }
+   }
+  },
+  "fanin": {
+   "uniform": {
+    "runs": [
+     {
+      "forker": {
+       "workers": 16,
+       "forks": 330414,
+       "forks_per_s": 33038.7,
+       "eagain": 0,
+       "other_errors": 0,
+       "sys_s": 28.225,
+       "rc": 0,
+       "wall_s": 10.019887266000296
+      },
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 347,
+       "p95_us": 1392,
+       "p99_us": 1773,
+       "max_us": 2756,
+       "mean_us": 501.7,
+       "rq_wait_us": 300082,
+       "rc": 0,
+       "wall_s": 9.015766529000757
+      },
+      "_sgd": {
+       "cpu_s": 1.29,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.013,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 1827,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        },
+        "forker": {
+         "duration_s": 10.013,
+         "calls": 330483,
+         "allowed": 330483,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 330486,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 68750,
+        "nr_switches": 97449,
+        "nr_voluntary_switches": 88941
+       }
+      }
+     },
+     {
+      "forker": {
+       "workers": 16,
+       "forks": 331744,
+       "forks_per_s": 33171.8,
+       "eagain": 0,
+       "other_errors": 0,
+       "sys_s": 28.146,
+       "rc": 0,
+       "wall_s": 10.015849513998546
+      },
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 385,
+       "p95_us": 1434,
+       "p99_us": 1728,
+       "max_us": 1997,
+       "mean_us": 520.5,
+       "rq_wait_us": 307365,
+       "rc": 0,
+       "wall_s": 9.014351644000271
+      },
+      "_sgd": {
+       "cpu_s": 1.31,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.011,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 1827,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        },
+        "forker": {
+         "duration_s": 10.009,
+         "calls": 331813,
+         "allowed": 331813,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 331816,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 69806,
+        "nr_switches": 98065,
+        "nr_voluntary_switches": 89708
+       }
+      }
+     },
+     {
+      "forker": {
+       "workers": 16,
+       "forks": 330838,
+       "forks_per_s": 33080.9,
+       "eagain": 0,
+       "other_errors": 0,
+       "sys_s": 28.338,
+       "rc": 0,
+       "wall_s": 10.02661162899858
+      },
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 341,
+       "p95_us": 1275,
+       "p99_us": 1625,
+       "max_us": 2246,
+       "mean_us": 476.8,
+       "rq_wait_us": 275645,
+       "rc": 0,
+       "wall_s": 9.01339782100149
+      },
+      "_sgd": {
+       "cpu_s": 1.34,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.011,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 1827,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        },
+        "forker": {
+         "duration_s": 10.018,
+         "calls": 330907,
+         "allowed": 330907,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 330910,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 69592,
+        "nr_switches": 97815,
+        "nr_voluntary_switches": 89324
+       }
+      }
+     }
+    ],
+    "traced": {
+     "forker": {
+      "workers": 16,
+      "forks": 299095,
+      "forks_per_s": 29907.4,
+      "eagain": 0,
+      "other_errors": 0,
+      "sys_s": 27.588,
+      "rc": 0,
+      "wall_s": 10.021037758000602
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 555,
+      "p95_us": 1701,
+      "p99_us": 2071,
+      "max_us": 5458,
+      "mean_us": 729.0,
+      "rq_wait_us": 439682,
+      "rc": 0,
+      "wall_s": 9.017813414000557
+     },
+     "_sgd": {
+      "cpu_s": 1.97,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.015,
+        "calls": 1824,
+        "allowed": 1824,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 1827,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "forker": {
+        "duration_s": 10.016,
+        "calls": 299164,
+        "allowed": 299164,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 299167,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      },
+      "sched": {
+       "se.nr_migrations": 59999,
+       "nr_switches": 84064,
+       "nr_voluntary_switches": 77083
+      }
+     },
+     "_trace": {
+      "segments": {
+       "total": {
+        "count": 1805,
+        "mean_us": 348.0598559556787,
+        "p50_us": 216.9318181818182,
+        "p90_us": 960.8333333333334,
+        "p99_us": 1904.7468354430384
+       },
+       "seccomp": {
+        "count": 1805,
+        "mean_us": 329.6677761772853,
+        "p50_us": 197.8409090909091,
+        "p90_us": 945.0,
+        "p99_us": 1898.9932885906044
+       },
+       "to_sgd": {
+        "count": 1805,
+        "mean_us": 80.64507922437673,
+        "p50_us": 38.958333333333336,
+        "p90_us": 218.04347826086956,
+        "p99_us": 439.91666666666674
+       },
+       "to_wakeup": {
+        "count": 1533,
+        "mean_us": 102.39719439008479,
+        "p50_us": 43.60294117647059,
+        "p90_us": 274.61904761904765,
+        "p99_us": 532.2333333333336
+       },
+       "filter": {
+        "count": 1805,
+        "mean_us": 3.0561152354570638,
+        "p50_us": 3.2375,
+        "p90_us": 5.256666666666667,
+        "p99_us": 7.195000000000005
+       },
+       "notify": {
+        "count": 1513,
+        "mean_us": 97.42253073364178,
+        "p50_us": 57.04081632653062,
+        "p90_us": 258.1666666666667,
+        "p99_us": 518.6999999999989
+       },
+       "cpu_wake": {
+        "count": 1312,
+        "mean_us": 19.809163109756096,
+        "p50_us": 16.600284495021338,
+        "p90_us": 32.836734693877546,
+        "p99_us": 63.92000000000007
+       },
+       "sgd_sched": {
+        "count": 1482,
+        "mean_us": 12.660162618083671,
+        "p50_us": 2.4662337662337666,
+        "p90_us": 6.639999999999998,
+        "p99_us": 253.93333333333354
+       },
+       "sgd_to_recv": {
+        "count": 780,
+        "mean_us": 7.561637179487179,
+        "p50_us": 6.541666666666667,
+        "p90_us": 15.0,
+        "p99_us": 30.285714285714352
+       },
+       "recv": {
+        "count": 1805,
+        "mean_us": 6.765731301939058,
+        "p50_us": 4.6990566037735855,
+        "p90_us": 9.70625,
+        "p99_us": 68.30555555555557
+       },
+       "decide": {
+        "count": 1805,
+        "mean_us": 2.0677008310249305,
+        "p50_us": 1.9461783439490445,
+        "p90_us": 2.883695652173913,
+        "p99_us": 4.197500000000002
+       },
+       "back": {
+        "count": 1805,
+        "mean_us": 246.95499612188365,
+        "p50_us": 110.40983606557376,
+        "p90_us": 823.75,
+        "p99_us": 1796.8354430379752
+       },
+       "kernel": {
+        "count": 1805,
+        "mean_us": 18.392079778393352,
+        "p50_us": 16.088573360378636,
+        "p90_us": 25.218181818181815,
+        "p99_us": 48.423076923076955
+       },
+       "sgd_wake": {
+        "count": 74393,
+        "mean_us": 33.53063510007662,
+        "p50_us": 2.1264986376021797,
+        "p90_us": 118.94155019059716,
+        "p99_us": 379.1158415841591
+       },
+       "victim_wake": {
+        "count": 2721,
+        "mean_us": 170.5055762587284,
+        "p50_us": 61.726190476190474,
+        "p90_us": 559.7500000000002,
+        "p99_us": 1672.5974025974022
+       }
+      },
+      "where": {
+       "victim_other_cpu": 526,
+       "sgd_same_cpu": 597,
+       "victim_same_cpu": 2195,
+       "sgd_other_cpu": 73796
+      }
+     }
+    }
+   },
+   "uniform-nosync": {
+    "runs": [
+     {
+      "forker": {
+       "workers": 16,
+       "forks": 444908,
+       "forks_per_s": 44485.9,
+       "eagain": 0,
+       "other_errors": 0,
+       "sys_s": 37.424,
+       "rc": 0,
+       "wall_s": 10.012254588998985
+      },
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 183,
+       "p95_us": 485,
+       "p99_us": 743,
+       "max_us": 1598,
+       "mean_us": 217.0,
+       "rq_wait_us": 129228,
+       "rc": 0,
+       "wall_s": 9.00832727299894
+      },
+      "_sgd": {
+       "cpu_s": 3.81,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.006,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 1827,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        },
+        "forker": {
+         "duration_s": 10.01,
+         "calls": 444977,
+         "allowed": 444977,
+         "waited": 628,
+         "rejected": 0,
+         "charged": 444980,
+         "max_wait_ms": 10.4,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 4286,
+        "nr_switches": 89641,
+        "nr_voluntary_switches": 78374
+       }
+      }
+     },
+     {
+      "forker": {
+       "workers": 16,
+       "forks": 445154,
+       "forks_per_s": 44511.6,
+       "eagain": 0,
+       "other_errors": 0,
+       "sys_s": 36.934,
+       "rc": 0,
+       "wall_s": 10.02439153100022
+      },
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 168,
+       "p95_us": 372,
+       "p99_us": 527,
+       "max_us": 931,
+       "mean_us": 190.3,
+       "rq_wait_us": 86805,
+       "rc": 0,
+       "wall_s": 9.010599510000247
+      },
+      "_sgd": {
+       "cpu_s": 3.86,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.007,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 1827,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        },
+        "forker": {
+         "duration_s": 10.017,
+         "calls": 445223,
+         "allowed": 445223,
+         "waited": 992,
+         "rejected": 0,
+         "charged": 445226,
+         "max_wait_ms": 10.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 4500,
+        "nr_switches": 87892,
+        "nr_voluntary_switches": 77242
+       }
+      }
+     },
+     {
+      "forker": {
+       "workers": 16,
+       "forks": 443379,
+       "forks_per_s": 44333.3,
+       "eagain": 0,
+       "other_errors": 0,
+       "sys_s": 37.111,
+       "rc": 0,
+       "wall_s": 10.022663944999294
+      },
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 177,
+       "p95_us": 397,
+       "p99_us": 576,
+       "max_us": 945,
+       "mean_us": 195.8,
+       "rq_wait_us": 92905,
+       "rc": 0,
+       "wall_s": 9.018831456000044
+      },
+      "_sgd": {
+       "cpu_s": 3.84,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.016,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 1827,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        },
+        "forker": {
+         "duration_s": 10.017,
+         "calls": 443448,
+         "allowed": 443448,
+         "waited": 486,
+         "rejected": 0,
+         "charged": 443451,
+         "max_wait_ms": 10.2,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 3949,
+        "nr_switches": 88639,
+        "nr_voluntary_switches": 77330
+       }
+      }
+     }
+    ],
+    "traced": {
+     "forker": {
+      "workers": 16,
+      "forks": 430103,
+      "forks_per_s": 43003.8,
+      "eagain": 0,
+      "other_errors": 0,
+      "sys_s": 37.276,
+      "rc": 0,
+      "wall_s": 10.014623158998802
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 247,
+      "p95_us": 599,
+      "p99_us": 841,
+      "max_us": 1375,
+      "mean_us": 288.9,
+      "rq_wait_us": 157377,
+      "rc": 0,
+      "wall_s": 9.020066843999302
+     },
+     "_sgd": {
+      "cpu_s": 4.23,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.017,
+        "calls": 1824,
+        "allowed": 1824,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 1827,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "forker": {
+        "duration_s": 10.007,
+        "calls": 430172,
+        "allowed": 430172,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 430175,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      },
+      "sched": {
+       "se.nr_migrations": 2793,
+       "nr_switches": 79452,
+       "nr_voluntary_switches": 67524
+      }
+     },
+     "_trace": {
+      "segments": {
+       "total": {
+        "count": 1805,
+        "mean_us": 124.28470249307479,
+        "p50_us": 95.75892857142857,
+        "p90_us": 241.66666666666666,
+        "p99_us": 544.8750000000001
+       },
+       "seccomp": {
+        "count": 1805,
+        "mean_us": 103.74394681440444,
+        "p50_us": 75.24,
+        "p90_us": 217.8125,
+        "p99_us": 523.9000000000001
+       },
+       "to_sgd": {
+        "count": 1805,
+        "mean_us": 55.60279058171746,
+        "p50_us": 29.982993197278912,
+        "p90_us": 125.3125,
+        "p99_us": 434.7500000000002
+       },
+       "to_wakeup": {
+        "count": 868,
+        "mean_us": 55.251116359447,
+        "p50_us": 34.0,
+        "p90_us": 126.13333333333335,
+        "p99_us": 343.2000000000005
+       },
+       "filter": {
+        "count": 1805,
+        "mean_us": 3.3670880886426593,
+        "p50_us": 3.51,
+        "p90_us": 6.147222222222223,
+        "p99_us": 8.947500000000002
+       },
+       "notify": {
+        "count": 830,
+        "mean_us": 53.679430120481925,
+        "p50_us": 37.45454545454545,
+        "p90_us": 127.33333333333333,
+        "p99_us": 357.00000000000045
+       },
+       "cpu_wake": {
+        "count": 780,
+        "mean_us": 7.816251282051282,
+        "p50_us": 2.64,
+        "p90_us": 24.615384615384617,
+        "p99_us": 50.400000000000084
+       },
+       "sgd_sched": {
+        "count": 653,
+        "mean_us": 31.08748851454824,
+        "p50_us": 4.15,
+        "p90_us": 91.30769230769234,
+        "p99_us": 274.7000000000003
+       },
+       "sgd_to_recv": {
+        "count": 431,
+        "mean_us": 5.127426914153133,
+        "p50_us": 4.51875,
+        "p90_us": 9.13,
+        "p99_us": 19.320588235294117
+       },
+       "recv": {
+        "count": 1805,
+        "mean_us": 13.902750692520776,
+        "p50_us": 8.71,
+        "p90_us": 34.84771573604061,
+        "p99_us": 79.93750000000006
+       },
+       "decide": {
+        "count": 1805,
+        "mean_us": 2.1622249307479224,
+        "p50_us": 1.9371951219512196,
+        "p90_us": 3.4205882352941175,
+        "p99_us": 6.195000000000005
+       },
+       "back": {
+        "count": 1805,
+        "mean_us": 45.97893130193906,
+        "p50_us": 27.03416149068323,
+        "p90_us": 114.84375,
+        "p99_us": 292.3750000000001
+       },
+       "kernel": {
+        "count": 1805,
+        "mean_us": 20.54075567867036,
+        "p50_us": 17.1422893481717,
+        "p90_us": 28.27625570776256,
+        "p99_us": 81.90000000000009
+       },
+       "sgd_wake": {
+        "count": 64735,
+        "mean_us": 36.234653649494085,
+        "p50_us": 7.590833333333333,
+        "p90_us": 102.46823379923761,
+        "p99_us": 227.72872340425548
+       },
+       "victim_wake": {
+        "count": 2703,
+        "mean_us": 57.12441990381058,
+        "p50_us": 7.55,
+        "p90_us": 169.88461538461533,
+        "p99_us": 504.849999999999
+       }
+      },
+      "where": {
+       "victim_other_cpu": 1227,
+       "victim_same_cpu": 1476,
+       "sgd_same_cpu": 9767,
+       "sgd_other_cpu": 54971
+      }
+     }
+    }
+   },
+   "sg-full": {
+    "runs": [
+     {
+      "forker": {
+       "workers": 16,
+       "forks": 4534,
+       "forks_per_s": 452.5,
+       "eagain": 0,
+       "other_errors": 0,
+       "sys_s": 0.98,
+       "rc": 0,
+       "wall_s": 10.03046607899887
+      },
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 243,
+       "p95_us": 386,
+       "p99_us": 467,
+       "max_us": 780,
+       "mean_us": 245.5,
+       "rq_wait_us": 7088,
+       "rc": 0,
+       "wall_s": 9.022201929999937
+      },
+      "_sgd": {
+       "cpu_s": 0.16,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.014,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 6468,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        },
+        "forker": {
+         "duration_s": 10.027,
+         "calls": 4603,
+         "allowed": 4603,
+         "waited": 3285,
+         "rejected": 0,
+         "charged": 760073,
+         "max_wait_ms": 71.2,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 2514,
+        "nr_switches": 5370,
+        "nr_voluntary_switches": 5225
+       }
+      }
+     },
+     {
+      "forker": {
+       "workers": 16,
+       "forks": 4526,
+       "forks_per_s": 451.7,
+       "eagain": 0,
+       "other_errors": 0,
+       "sys_s": 0.937,
+       "rc": 0,
+       "wall_s": 10.035188109000956
+      },
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 237,
+       "p95_us": 373,
+       "p99_us": 471,
+       "max_us": 569,
+       "mean_us": 234.3,
+       "rq_wait_us": 6928,
+       "rc": 0,
+       "wall_s": 9.030336055999214
+      },
+      "_sgd": {
+       "cpu_s": 0.15,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.022,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 6468,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        },
+        "forker": {
+         "duration_s": 10.032,
+         "calls": 4595,
+         "allowed": 4595,
+         "waited": 3282,
+         "rejected": 0,
+         "charged": 758737,
+         "max_wait_ms": 70.1,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 2489,
+        "nr_switches": 5480,
+        "nr_voluntary_switches": 5356
+       }
+      }
+     },
+     {
+      "forker": {
+       "workers": 16,
+       "forks": 4523,
+       "forks_per_s": 451.7,
+       "eagain": 0,
+       "other_errors": 0,
+       "sys_s": 0.976,
+       "rc": 0,
+       "wall_s": 10.029827660000592
+      },
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 199,
+       "p95_us": 351,
+       "p99_us": 459,
+       "max_us": 602,
+       "mean_us": 202.1,
+       "rq_wait_us": 6203,
+       "rc": 0,
+       "wall_s": 9.0251258649987
+      },
+      "_sgd": {
+       "cpu_s": 0.15,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.016,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 6468,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        },
+        "forker": {
+         "duration_s": 10.025,
+         "calls": 4592,
+         "allowed": 4592,
+         "waited": 3302,
+         "rejected": 0,
+         "charged": 758236,
+         "max_wait_ms": 70.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 2595,
+        "nr_switches": 5558,
+        "nr_voluntary_switches": 5402
+       }
+      }
+     }
+    ],
+    "traced": {
+     "forker": {
+      "workers": 16,
+      "forks": 4523,
+      "forks_per_s": 451.7,
+      "eagain": 0,
+      "other_errors": 0,
+      "sys_s": 0.9,
+      "rc": 0,
+      "wall_s": 10.04461548099971
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 487,
+      "p95_us": 1019,
+      "p99_us": 1193,
+      "max_us": 1517,
+      "mean_us": 516.9,
+      "rq_wait_us": 142077,
+      "rc": 0,
+      "wall_s": 9.024995026000397
+     },
+     "_sgd": {
+      "cpu_s": 0.22,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.016,
+        "calls": 1824,
+        "allowed": 1824,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6468,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "forker": {
+        "duration_s": 10.025,
+        "calls": 4592,
+        "allowed": 4592,
+        "waited": 3304,
+        "rejected": 0,
+        "charged": 758236,
+        "max_wait_ms": 70.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      },
+      "sched": {
+       "se.nr_migrations": 2503,
+       "nr_switches": 4693,
+       "nr_voluntary_switches": 4540
+      }
+     },
+     "_trace": {
+      "segments": {
+       "total": {
+        "count": 1805,
+        "mean_us": 233.36834681440445,
+        "p50_us": 187.70833333333334,
+        "p90_us": 453.57142857142856,
+        "p99_us": 808.6875
+       },
+       "seccomp": {
+        "count": 1805,
+        "mean_us": 206.04156842105263,
+        "p50_us": 159.23611111111111,
+        "p90_us": 425.0,
+        "p99_us": 778.6875
+       },
+       "to_sgd": {
+        "count": 1805,
+        "mean_us": 117.17003601108033,
+        "p50_us": 111.28289473684211,
+        "p90_us": 188.9,
+        "p99_us": 267.0714285714286
+       },
+       "to_wakeup": {
+        "count": 1661,
+        "mean_us": 79.34237507525587,
+        "p50_us": 74.03030303030303,
+        "p90_us": 135.8301886792453,
+        "p99_us": 202.31666666666683
+       },
+       "filter": {
+        "count": 1805,
+        "mean_us": 6.1737351800554015,
+        "p50_us": 5.025,
+        "p90_us": 13.4375,
+        "p99_us": 32.375000000000114
+       },
+       "notify": {
+        "count": 1525,
+        "mean_us": 9.40855868852459,
+        "p50_us": 2.9611111111111112,
+        "p90_us": 5.092857142857143,
+        "p99_us": 258.75
+       },
+       "cpu_wake": {
+        "count": 1511,
+        "mean_us": 73.84583719391131,
+        "p50_us": 69.22839506172839,
+        "p90_us": 129.9761904761905,
+        "p99_us": 193.15000000000018
+       },
+       "sgd_sched": {
+        "count": 1661,
+        "mean_us": 12.681367850692354,
+        "p50_us": 8.225,
+        "p90_us": 25.102272727272737,
+        "p99_us": 93.41428571428585
+       },
+       "sgd_to_recv": {
+        "count": 1660,
+        "mean_us": 24.09003253012048,
+        "p50_us": 18.94894894894895,
+        "p90_us": 47.916666666666664,
+        "p99_us": 96.33333333333339
+       },
+       "recv": {
+        "count": 1805,
+        "mean_us": 4.826185595567867,
+        "p50_us": 4.728846153846154,
+        "p90_us": 7.178571428571429,
+        "p99_us": 13.30555555555558
+       },
+       "decide": {
+        "count": 1805,
+        "mean_us": 5.019423822714682,
+        "p50_us": 4.8046875,
+        "p90_us": 6.9944444444444445,
+        "p99_us": 12.681818181818224
+       },
+       "back": {
+        "count": 1805,
+        "mean_us": 83.85210858725762,
+        "p50_us": 23.406779661016948,
+        "p90_us": 301.875,
+        "p99_us": 644.8750000000001
+       },
+       "kernel": {
+        "count": 1805,
+        "mean_us": 27.326778393351802,
+        "p50_us": 25.65841584158416,
+        "p90_us": 37.232142857142854,
+        "p99_us": 86.50000000000014
+       },
+       "sgd_wake": {
+        "count": 3842,
+        "mean_us": 9.851274856845393,
+        "p50_us": 6.00625,
+        "p90_us": 18.99250374812594,
+        "p99_us": 82.14999999999995
+       },
+       "victim_wake": {
+        "count": 2724,
+        "mean_us": 60.45528964757709,
+        "p50_us": 13.16708229426434,
+        "p90_us": 188.66666666666637,
+        "p99_us": 582.5333333333341
+       }
+      },
+      "where": {
+       "victim_other_cpu": 34,
+       "sgd_same_cpu": 206,
+       "victim_same_cpu": 2690,
+       "sgd_other_cpu": 3636
+      }
+     }
+    }
+   },
+   "sg-full-nosync": {
+    "runs": [
+     {
+      "forker": {
+       "workers": 16,
+       "forks": 4537,
+       "forks_per_s": 452.8,
+       "eagain": 0,
+       "other_errors": 0,
+       "sys_s": 1.115,
+       "rc": 0,
+       "wall_s": 10.03267882200089
+      },
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 383,
+       "p95_us": 605,
+       "p99_us": 721,
+       "max_us": 867,
+       "mean_us": 378.8,
+       "rq_wait_us": 10434,
+       "rc": 0,
+       "wall_s": 9.012761932001013
+      },
+      "_sgd": {
+       "cpu_s": 0.28,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.01,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 6468,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        },
+        "forker": {
+         "duration_s": 10.029,
+         "calls": 4606,
+         "allowed": 4606,
+         "waited": 3336,
+         "rejected": 0,
+         "charged": 760574,
+         "max_wait_ms": 70.2,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 493,
+        "nr_switches": 4920,
+        "nr_voluntary_switches": 4875
+       }
+      }
+     },
+     {
+      "forker": {
+       "workers": 16,
+       "forks": 4536,
+       "forks_per_s": 452.7,
+       "eagain": 0,
+       "other_errors": 0,
+       "sys_s": 0.978,
+       "rc": 0,
+       "wall_s": 10.031572051000694
+      },
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 361,
+       "p95_us": 544,
+       "p99_us": 674,
+       "max_us": 958,
+       "mean_us": 355.7,
+       "rq_wait_us": 190,
+       "rc": 0,
+       "wall_s": 9.023969444000613
+      },
+      "_sgd": {
+       "cpu_s": 0.27,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.014,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 6468,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        },
+        "forker": {
+         "duration_s": 10.028,
+         "calls": 4605,
+         "allowed": 4605,
+         "waited": 3315,
+         "rejected": 0,
+         "charged": 760407,
+         "max_wait_ms": 73.6,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 522,
+        "nr_switches": 4910,
+        "nr_voluntary_switches": 4847
+       }
+      }
+     },
+     {
+      "forker": {
+       "workers": 16,
+       "forks": 4530,
+       "forks_per_s": 452.2,
+       "eagain": 0,
+       "other_errors": 0,
+       "sys_s": 1.254,
+       "rc": 0,
+       "wall_s": 10.033468382998763
+      },
+      "victim": {
+       "ops": 900,
+       "errors": 0,
+       "p50_us": 372,
+       "p95_us": 579,
+       "p99_us": 714,
+       "max_us": 893,
+       "mean_us": 375.3,
+       "rq_wait_us": 15025,
+       "rc": 0,
+       "wall_s": 9.02632204099973
+      },
+      "_sgd": {
+       "cpu_s": 0.3,
+       "jobs": {
+        "victim": {
+         "duration_s": 9.016,
+         "calls": 1824,
+         "allowed": 1824,
+         "waited": 0,
+         "rejected": 0,
+         "charged": 6468,
+         "max_wait_ms": 0.0,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        },
+        "forker": {
+         "duration_s": 10.029,
+         "calls": 4599,
+         "allowed": 4599,
+         "waited": 3314,
+         "rejected": 0,
+         "charged": 759405,
+         "max_wait_ms": 70.3,
+         "loans": 0,
+         "borrowed": 0,
+         "lent": 0
+        }
+       },
+       "sched": {
+        "se.nr_migrations": 535,
+        "nr_switches": 5029,
+        "nr_voluntary_switches": 4957
+       }
+      }
+     }
+    ],
+    "traced": {
+     "forker": {
+      "workers": 16,
+      "forks": 4522,
+      "forks_per_s": 451.5,
+      "eagain": 0,
+      "other_errors": 0,
+      "sys_s": 0.919,
+      "rc": 0,
+      "wall_s": 10.031391037000503
+     },
+     "victim": {
+      "ops": 900,
+      "errors": 0,
+      "p50_us": 420,
+      "p95_us": 656,
+      "p99_us": 778,
+      "max_us": 1049,
+      "mean_us": 402.8,
+      "rq_wait_us": 237,
+      "rc": 0,
+      "wall_s": 9.026100338000106
+     },
+     "_sgd": {
+      "cpu_s": 0.33,
+      "jobs": {
+       "victim": {
+        "duration_s": 9.019,
+        "calls": 1824,
+        "allowed": 1824,
+        "waited": 0,
+        "rejected": 0,
+        "charged": 6468,
+        "max_wait_ms": 0.0,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       },
+       "forker": {
+        "duration_s": 10.029,
+        "calls": 4591,
+        "allowed": 4591,
+        "waited": 3313,
+        "rejected": 0,
+        "charged": 758069,
+        "max_wait_ms": 70.3,
+        "loans": 0,
+        "borrowed": 0,
+        "lent": 0
+       }
+      },
+      "sched": {
+       "se.nr_migrations": 514,
+       "nr_switches": 4987,
+       "nr_voluntary_switches": 4910
+      }
+     },
+     "_trace": {
+      "segments": {
+       "total": {
+        "count": 1805,
+        "mean_us": 180.1825972299169,
+        "p50_us": 183.63095238095238,
+        "p90_us": 281.61764705882354,
+        "p99_us": 382.3750000000001
+       },
+       "seccomp": {
+        "count": 1805,
+        "mean_us": 155.65434016620497,
+        "p50_us": 157.32142857142858,
+        "p90_us": 248.875,
+        "p99_us": 349.8750000000001
+       },
+       "to_sgd": {
+        "count": 1805,
+        "mean_us": 88.11221440443214,
+        "p50_us": 85.95238095238095,
+        "p90_us": 140.64814814814815,
+        "p99_us": 212.95000000000005
+       },
+       "to_wakeup": {
+        "count": 1804,
+        "mean_us": 66.95570399113082,
+        "p50_us": 64.42786069651741,
+        "p90_us": 108.35849056603773,
+        "p99_us": 173.70000000000005
+       },
+       "filter": {
+        "count": 1805,
+        "mean_us": 4.863838781163435,
+        "p50_us": 3.9973684210526317,
+        "p90_us": 8.563888888888888,
+        "p99_us": 17.369047619047628
+       },
+       "notify": {
+        "count": 1805,
+        "mean_us": 2.821104709141274,
+        "p50_us": 2.626923076923077,
+        "p90_us": 4.054166666666666,
+        "p99_us": 6.197500000000002
+       },
+       "cpu_wake": {
+        "count": 1804,
+        "mean_us": 59.49326219512195,
+        "p50_us": 56.380090497737555,
+        "p90_us": 97.62616822429905,
+        "p99_us": 161.20000000000005
+       },
+       "sgd_sched": {
+        "count": 1804,
+        "mean_us": 6.921017738359202,
+        "p50_us": 5.38421052631579,
+        "p90_us": 15.003174603174601,
+        "p99_us": 24.960000000000036
+       },
+       "sgd_to_recv": {
+        "count": 1804,
+        "mean_us": 10.689533259423504,
+        "p50_us": 10.480192076830733,
+        "p90_us": 19.142857142857142,
+        "p99_us": 29.475000000000005
+       },
+       "recv": {
+        "count": 1805,
+        "mean_us": 3.526870360110803,
+        "p50_us": 3.5475,
+        "p90_us": 5.739583333333333,
+        "p99_us": 7.898333333333335
+       },
+       "decide": {
+        "count": 1805,
+        "mean_us": 4.044474238227147,
+        "p50_us": 4.066129032258065,
+        "p90_us": 6.0339285714285715,
+        "p99_us": 9.495000000000003
+       },
+       "back": {
+        "count": 1805,
+        "mean_us": 63.497651523545706,
+        "p50_us": 60.860465116279066,
+        "p90_us": 105.0,
+        "p99_us": 174.21428571428578
+       },
+       "kernel": {
+        "count": 1805,
+        "mean_us": 24.52825706371191,
+        "p50_us": 24.141583054626537,
+        "p90_us": 35.74561403508772,
+        "p99_us": 49.97058823529414
+       },
+       "sgd_wake": {
+        "count": 4332,
+        "mean_us": 8.886690674053554,
+        "p50_us": 6.479310344827586,
+        "p90_us": 17.63734290843806,
+        "p99_us": 57.89090909090936
+       },
+       "victim_wake": {
+        "count": 2724,
+        "mean_us": 6.125866005873715,
+        "p50_us": 5.12,
+        "p90_us": 13.810218978102188,
+        "p99_us": 19.775182481751827
+       }
+      },
+      "where": {
+       "sgd_same_cpu": 877,
+       "victim_same_cpu": 884,
+       "victim_other_cpu": 1840,
+       "sgd_other_cpu": 3455
+      }
+     }
+    }
+   }
+  }
+ }
+}
